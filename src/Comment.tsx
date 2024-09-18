@@ -2,6 +2,7 @@ import {Comments} from "./types.ts";
 import img from "./assets/fa_photo.jpg";
 import ReactMarkdown from "react-markdown";
 import {Suspense, SVGProps, useEffect, useState} from "react";
+import {useSpring , animated} from "react-spring";
 
 const CloseIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
@@ -66,13 +67,20 @@ const loadMarkdown = async (filename: string) => {
 
 export const Comment = ({currentComment, onClose}: { currentComment: Comments, onClose: () => void }) => {
     const [markdownContent, setMarkdownContent] = useState<string>('');
-
+    const [props] = useSpring(
+        () => ({
+            from: { opacity: 0, y: 1.2 },
+            to: { opacity: 1, y: 0 },
+        }),
+        []
+    )
     useEffect(() => {
         const filename = comments[currentComment]; // Get the file name from the comments object
         loadMarkdown(filename).then(setMarkdownContent).catch(console.error);
     }, [currentComment]);
     return (
-        <div
+        <animated.div
+            style={props}
             className="bg-gray-800 h-fit max-h-[calc(100svh-100px)] overflow-auto w-full rounded-lg border sticky top-12">
             <div className="flex gap-2 justify-between items-center sticky top-0 bg-gray-800 p-4">
                 <div className="flex gap-2">
@@ -94,6 +102,6 @@ export const Comment = ({currentComment, onClose}: { currentComment: Comments, o
             <p className="prose prose-sm !max-w-none leading-tight prose-invert text-justify px-4 pb-4">
                 <MarkdownRenderer markdown={markdownContent}/>
             </p>
-        </div>
+        </animated.div>
     )
 }

@@ -2,9 +2,12 @@ I am familiar with all of the technologies mentioned. I have worked extensively 
 I have also used `TanStack Query` in a few projects (combined with `CQRS` pattern)
 I am confident that I can leverage my experience to contribute to the team and the product. 
 
-`TypeScript` is my way to go when it comes to writing maintainable and scalable code - I have been using it for a few years now (like for real - no `any` types in my code)
+`TypeScript` is my way to go when it comes to writing maintainable and scalable code - I have been using it for a few years now (like for real - no `any` types in my code 💻)
 
 Other technologies I've worked with:
+- [`Node.js`](https://nodejs.org/)
+- [`Django`](https://www.djangoproject.com/)
+- [`FastAPI`](https://fastapi.tiangolo.com/)
 - [`Astro`](https://astro.build/)
 - [`Gatsby`](https://www.gatsbyjs.com/)
 - [`TailwindCSS`](https://tailwindcss.com/)
@@ -12,3 +15,6 @@ Other technologies I've worked with:
 - [`React Hook Form`](https://react-hook-form.com/)
 - [`Formik`](https://formik.org/)
 - [All `Tanstack` tools](https://tanstack.com/)
+- [`R` and `Shiny`](https://shiny.rstudio.com/)
+- [`Docker`](https://www.docker.com/)
+- [`Vite`](https://vitejs.dev/)
