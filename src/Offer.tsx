@@ -11,9 +11,12 @@ const LinkWithComment = ({children, isActive, onSelectedComment}: {
 }) => {
     return (
         <button onClick={onSelectedComment} className={clsx(
-            'relative inline-block cursor-pointer underline text-yellow-200 bg-transparent text-left', // Use `inline-block` for multi-line and positioning support
-            {"before:hidden": !isActive}, // Hide the pseudo-element when not active
-            'before:transition-all before:absolute before:top-0 before:left-0 before:w-full before:h-full before:scale-x-[1.03] before:bg-green-800/90 before:rounded before:z-[-1]', // Pseudo-element with full background
+            " decoration-2 decoration-gray-500",
+            { "translate-x-2": isActive },
+            'relative inline-block cursor-pointer underline bg-transparent text-left', // Use `inline-block` for multi-line and positioning support
+            {"before:bg-transparent": !isActive}, // Hide the pseudo-element when not active
+            "hover:before:bg-gray-600",
+            'before:transition-all  before:absolute before:top-0 before:left-0 before:w-full before:h-full before:scale-x-[1.03] before:bg-gray-700 before:rounded before:z-[-1]', // Pseudo-element with full background
         )}>
             {children}
         </button>
@@ -27,19 +30,14 @@ export const Offer = () => {
         <div className="flex gap-8 w-full flex-col lg:flex-row">
             <div
                 className="w-full prose dark:prose-invert prose-sm prose-stone !max-w-none text-white prose-amber text-left">
-                <h1 className=""> Lead Frontend Engineer @ ChurchDesk 🚀</h1>
+                <h1 className=""><span className="text-blue-500">Filip as</span> Lead Frontend Engineer @ ChurchDesk 🚀</h1>
                 <h2 className="text-blue-500">CV vs Offer description</h2>
-                <h3 className="sc-1npqnwg-4 sc-1npqnwg-5 sc-1uwf3m5-0 nNByh custom-css-style-job-description">
-                    Job description
-                </h3>
+                <blockquote className="">
+                    Please find my annotations to the relevant points of the offer elaborating on my experience, skills required for the role and motivation.<br/>
+                </blockquote>
+                <div>
                 <div>
                     <div>
-                        <p>We are seeking a highly skilled Lead Frontend Engineer with 6+ years of experience to join
-                            our team. If you are passionate about building intuitive, high-performance user interfaces,
-                            enjoy mentoring others, and thrive in a collaborative, fast-paced environment, we'd love to
-                            hear
-                            from you.
-                        </p>
                         <h4>
                             What you will do
                         </h4>
@@ -66,23 +64,8 @@ export const Offer = () => {
                             isActive={currentComment === Comments.Churches}
                             onSelectedComment={() => setCurrentComment(Comments.Churches)}>Our mission is to help
                             churches modernize and stay connected with their communities
-                            in a rapidly changing world.</LinkWithComment> As a Software-as-a-Service (SaaS) company, we
-                            provide digital
-                            tools that enable churches to streamline their operations, communicate more effectively, and
-                            engage with their congregations. Over the past 12 years, we’ve grown from a startup into an
-                            international business, but there’s still a lot of work ahead. Join us to work on
-                            transformative projects, have fun, and develop both yourself and your career.<br/></p>
-                        <h4>What we offer</h4>
-                        <ul>
-                            <li dir="ltr"><p dir="ltr">An opportunity to make a big impact on a product that serves some
-                                of the largest and oldest institutions in the world.</p></li>
-                            <li dir="ltr"><p dir="ltr">A supportive, low-ceremony, and lean-process work
-                                environment.</p></li>
-                            <li dir="ltr"><p dir="ltr">6 weeks of paid vacation + your local public holidays to support
-                                your work-life balance.</p></li>
-                            <li dir="ltr"><p dir="ltr">A great social environment with annual company kick-offs, team
-                                trips, and friendly challenges like board games.</p></li>
-                        </ul>
+                            in a rapidly changing world.</LinkWithComment>
+                        </p>
                     </div>
                 </div>
                 <h3 className="sc-1npqnwg-4 sc-1npqnwg-5 sc-1uwf3m5-0 sc-1uwf3m5-1 iErCYo custom-css-style-job-requirements">Job
@@ -134,6 +117,7 @@ export const Offer = () => {
                                 plan to work remotely.</LinkWithComment></p></li>
                         </ul>
                     </div>
+                </div>
                 </div>
             </div>
             <div className="w-full bottom-8 sticky lg:relative">

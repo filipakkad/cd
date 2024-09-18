@@ -8,6 +8,7 @@ Other technologies I've worked with:
 - [`Node.js`](https://nodejs.org/)
 - [`Django`](https://www.djangoproject.com/)
 - [`FastAPI`](https://fastapi.tiangolo.com/)
+- [`Single-spa`](https://single-spa.js.org/)
 - [`Astro`](https://astro.build/)
 - [`Gatsby`](https://www.gatsbyjs.com/)
 - [`TailwindCSS`](https://tailwindcss.com/)
@@ -18,3 +19,5 @@ Other technologies I've worked with:
 - [`R` and `Shiny`](https://shiny.rstudio.com/)
 - [`Docker`](https://www.docker.com/)
 - [`Vite`](https://vitejs.dev/)
+- [`ESLint`](https://eslint.org/)
+

@@ -26,7 +26,7 @@ function App() {
                              href="mailto:filip.akkad@gmail.com"><FaEnvelope/> filip.akkad@gmail.com</a>
                           <a className="text-xs flex gap-2 items-center"
                              href="https://www.linkedin.com/in/filip-akkad/"><FaLinkedinIn/>@filipakkad</a>
-                          <span className="text-xs flex gap-2 items-center"><FaCity/> Warsaw</span>
+                          <span className="text-xs flex gap-2 items-center"><FaCity/> Warsaw, Poland</span>
                       </div>
                   </div>
               </div>

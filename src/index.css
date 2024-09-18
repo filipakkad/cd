@@ -58,3 +58,7 @@ button {
     background-color: #f9f9f9;
   }
 }
+
+code {
+  scale: 2;
+}
