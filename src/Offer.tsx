@@ -26,6 +26,7 @@ export const Offer = () => {
     return (
         <div className="flex gap-8 w-full flex-col lg:flex-row">
             <div className="w-full prose dark:prose-invert prose-sm prose-stone !max-w-none text-white prose-amber text-left">
+                <h1 className="whitespace-nowrap"><span className="text-blue-500">(Filip as)</span> Lead Frontend Engineer 🚀</h1>
                 <h3 className="sc-1npqnwg-4 sc-1npqnwg-5 sc-1uwf3m5-0 nNByh custom-css-style-job-description">
                     Job description
                 </h3>
