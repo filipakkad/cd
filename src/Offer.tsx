@@ -120,7 +120,7 @@ export const Offer = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full bottom-0 sticky lg:relative">
+            <div className="w-full bottom-8 sticky lg:relative">
                 {currentComment && <Comment onClose={() => setCurrentComment(null)} currentComment={currentComment}/>}
             </div>
         </div>

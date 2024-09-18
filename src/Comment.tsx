@@ -74,7 +74,7 @@ export const Comment = ({currentComment, onClose }: { currentComment: Comments, 
                 </div>
             </div>
             <div className="border-t my-2 border-gray-50/50"/>
-            <p className="prose prose-sm !max-w-none text-xs prose-invert text-justify">
+            <p className="prose prose-sm !max-w-none leading-tight prose-invert text-justify">
                 <MarkdownRenderer markdown={markdownContent}/>
             </p>
         </div>
