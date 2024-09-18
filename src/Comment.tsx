@@ -56,8 +56,8 @@ export const Comment = ({currentComment, onClose }: { currentComment: Comments, 
         loadMarkdown(filename).then(setMarkdownContent).catch(console.error);
     }, [currentComment]);
     return (
-        <div className="bg-gray-800 h-fit w-full p-4 rounded-lg border sticky top-12">
-            <div className="flex gap-2 justify-between items-center">
+        <div className="bg-gray-800 h-fit max-h-[calc(100svh-100px)] overflow-auto w-full rounded-lg border sticky top-12">
+            <div className="flex gap-2 justify-between items-center sticky top-0 bg-gray-800 p-4">
                 <div className="flex gap-2">
                     <div className="flex h-full items-center">
                         <img src={img} alt="Filip Akkad Image" className="rounded-full object-cover h-12 w-12"/>
@@ -73,8 +73,8 @@ export const Comment = ({currentComment, onClose }: { currentComment: Comments, 
                     </button>
                 </div>
             </div>
-            <div className="border-t my-2 border-gray-50/50"/>
-            <p className="prose prose-sm !max-w-none leading-tight prose-invert text-justify">
+            <div className="border-t my-2 border-gray-50/50 px-4"/>
+            <p className="prose prose-sm !max-w-none leading-tight prose-invert text-justify px-4 pb-4">
                 <MarkdownRenderer markdown={markdownContent}/>
             </p>
         </div>

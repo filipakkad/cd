@@ -13,7 +13,7 @@ const LinkWithComment = ({children, isActive, onSelectedComment}: {
         <button onClick={onSelectedComment} className={clsx(
             'relative inline-block cursor-pointer underline text-yellow-200 bg-transparent text-left', // Use `inline-block` for multi-line and positioning support
             {"before:hidden": !isActive}, // Hide the pseudo-element when not active
-            'before:absolute before:top-0 before:left-0 before:w-full before:h-full before:scale-x-[1.03] before:bg-green-600/40 before:rounded before:z-[-1]', // Pseudo-element with full background
+            'before:absolute before:top-0 before:left-0 before:w-full before:h-full before:scale-x-[1.03] before:bg-green-800/90 before:rounded before:z-[-1]', // Pseudo-element with full background
         )}>
             {children}
         </button>
