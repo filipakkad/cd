@@ -1,12 +1,12 @@
 import './App.css'
 import {Offer} from "./Offer.tsx";
 import "@fontsource/montserrat"; // Defaults to weight 400
-import "@fontsource/montserrat/200.css"; // Specify weight
-import "@fontsource/montserrat/300.css"; // Specify weight
-import "@fontsource/montserrat/400.css"; // Specify weight
-import "@fontsource/montserrat/500.css"; // Specify weight
-import "@fontsource/montserrat/600.css"; // Specify weight
-import "@fontsource/montserrat/700.css"; // Specify weight
+import "@fontsource/montserrat/latin-200.css"; // Specify weight
+import "@fontsource/montserrat/latin-300.css"; // Specify weight
+import "@fontsource/montserrat/latin-400.css"; // Specify weight
+import "@fontsource/montserrat/latin-500.css"; // Specify weight
+import "@fontsource/montserrat/latin-600.css"; // Specify weight
+import "@fontsource/montserrat/latin-700.css"; // Specify weight
 import {FaEnvelope, FaLinkedinIn, FaCity} from "react-icons/fa";
 
 import img from "./assets/fa_photo.jpg"

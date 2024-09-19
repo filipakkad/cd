@@ -1,7 +1,8 @@
-import {ReactNode, useState} from "react";
+import {ReactNode, useEffect} from "react";
 import clsx from "clsx";
 import {Comments} from "./types.ts";
 import {Comment} from "./Comment.tsx";
+import {useSearchParams} from "react-router-dom";
 
 
 const LinkWithComment = ({children, isActive, onSelectedComment}: {
@@ -26,7 +27,21 @@ const LinkWithComment = ({children, isActive, onSelectedComment}: {
 
 
 export const Offer = () => {
-    const [currentComment, setCurrentComment] = useState<Comments | null>(Comments.INTRO);
+    const [currentCommentSearch, setCurrentCommentSearch] = useSearchParams();
+
+    useEffect(() => {
+        setCurrentCommentSearch({ comment: Comments.Intro });
+    }, []);
+
+    const currentComment = currentCommentSearch.get('comment') as Comments ?? null;
+
+    const setCurrentComment = (comment: Comments | null) => {
+        if(comment === null) {
+            setCurrentCommentSearch();
+            return
+        }
+        setCurrentCommentSearch({ comment });
+    }
     return (
         <div className="flex gap-8 w-full flex-col lg:flex-row">
             <div
@@ -58,12 +73,12 @@ export const Offer = () => {
                         <p dir="ltr">
                             <span>As a Lead Frontend Engineer, you will be a hands-on leader responsible for driving
                             the development of our user-facing applications. <LinkWithComment
-                                    isActive={currentComment === Comments.TEST}
-                                    onSelectedComment={() => setCurrentComment(Comments.TEST)}>In this role, you will be instrumental in
+                                    isActive={currentComment === Comments.General}
+                                    onSelectedComment={() => setCurrentComment(Comments.General)}>In this role, you will be instrumental in
                             shaping our frontend architecture, establishing best practices, and guiding a team of
                                     talented engineers.</LinkWithComment> <LinkWithComment
-                                    isActive={currentComment === Comments.TEST2}
-                                    onSelectedComment={() => setCurrentComment(Comments.TEST2)}>You will utilize modern tools and frameworks such as React, TypeScript,
+                                    isActive={currentComment === Comments.Tooling}
+                                    onSelectedComment={() => setCurrentComment(Comments.Tooling)}>You will utilize modern tools and frameworks such as React, TypeScript,
                             and TanStack Query to create dynamic, scalable user interfaces that enhance the user
                             experience.</LinkWithComment></span></p>
                         <p dir="ltr">In addition you will also play a critical role as an active sparring partner for

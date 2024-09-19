@@ -16,9 +16,9 @@ const CloseIcon = (props: SVGProps<SVGSVGElement>) => {
 
 
 const comments: Record<Comments, string> = {
-    [Comments.INTRO]: "comment-intro.md",
-    [Comments.TEST]: "comment-1.md",
-    [Comments.TEST2]: "comment-2.md",
+    [Comments.Intro]: "comment-intro.md",
+    [Comments.General]: "comment-1.md",
+    [Comments.Tooling]: "comment-2.md",
     [Comments.Experience]: "comment-experience.md",
     [Comments.Components]: "comment-components.md",
     [Comments.ReactNative]: "comment-reactnative.md",
@@ -76,8 +76,10 @@ export const Comment = ({currentComment, onClose}: { currentComment: Comments, o
         []
     )
     useEffect(() => {
-        const filename = comments[currentComment]; // Get the file name from the comments object
-        loadMarkdown(filename).then(setMarkdownContent).catch(console.error);
+        if(currentComment) {
+            const filename = comments[currentComment]; // Get the file name from the comments object
+            loadMarkdown(filename).then(setMarkdownContent).catch(console.error);
+        }
     }, [currentComment]);
     return (
         <animated.div

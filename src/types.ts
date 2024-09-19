@@ -1,7 +1,7 @@
 export enum Comments {
-    INTRO = "intro",
-    TEST = "test1",
-    TEST2 = "test2",
+    Intro = "intro",
+    General = "general",
+    Tooling = "tooling",
     Experience = "experience",
     Components = "components",
     ReactNative = "react-native",
