@@ -1,4 +1,5 @@
 export enum Comments {
+    INTRO = "intro",
     TEST = "test1",
     TEST2 = "test2",
     Experience = "experience",

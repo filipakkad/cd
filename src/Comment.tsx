@@ -16,6 +16,7 @@ const CloseIcon = (props: SVGProps<SVGSVGElement>) => {
 
 
 const comments: Record<Comments, string> = {
+    [Comments.INTRO]: "comment-intro.md",
     [Comments.TEST]: "comment-1.md",
     [Comments.TEST2]: "comment-2.md",
     [Comments.Experience]: "comment-experience.md",

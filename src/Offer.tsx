@@ -26,34 +26,28 @@ const LinkWithComment = ({children, isActive, onSelectedComment}: {
 
 
 export const Offer = () => {
-    const [currentComment, setCurrentComment] = useState<Comments | null>(null);
+    const [currentComment, setCurrentComment] = useState<Comments | null>(Comments.INTRO);
     return (
         <div className="flex gap-8 w-full flex-col lg:flex-row">
             <div
                 className="w-full prose dark:prose-invert prose-sm prose-stone !max-w-none text-white prose-amber text-left">
                 <h1 className="">Lead Frontend Engineer @ ChurchDesk 🚀</h1>
-                <h2 className="text-blue-500">CV vs Offer description</h2>
-                <blockquote className="">
-                    <div className="leading-tight font-light">
-                        <strong>Hi ChurchDesk team!</strong>
-                        <p>Thanks for checking out this page. I put it together while prepping for my interview and
-                            thought it’d be a fun way to share my thoughts with you.</p>
-                        <p>I’ve gone through each point and highlighted the key aspects from the job description.
-                            Hopefully, this gives you a clearer picture of who I am and sparks some interesting
-                            conversation.</p>
-                        <p>I whipped this up quickly in my spare time, so please excuse the rough edges. 😄</p>
-                        <strong>But first - why did I apply?</strong>
+                <h2 className="text-blue-500">Hi ChurchDesk team!</h2>
+                    <div className="leading-tight">
+                        <strong>Why did I apply?</strong>
                         <p>I send applications only to carefully selected offers, and this one aligns closely with what
                             I’m looking for. I’m particularly interested in the mission of providing IT solutions for
-                            parishes—something I’ve thought about before. It’s a business domain I understand and
-                            identify with. Additionally, the opportunity for greater responsibility, both for the team
-                            and the product, is a natural and necessary direction for my development. The offer's
-                            conditions (including the Scandinavian work culture) are additional factors that appeal to
-                            me. At this stage in my career, I’m focusing on long-term relationships.</p>
-                        <p>Thanks again for your time!</p>
-                        <p>Filip</p>
+                            parishes—something I’ve thought about before. It’s a business domain (I think) I understand and
+                            identify with. </p>  <p>
+                        Additionally, the opportunity for greater responsibility, both for the team
+                        and the product, is a natural and necessary direction for my development. The offer's
+                        conditions (including the Scandinavian work culture) are additional factors that appeal to
+                        me. At this stage in my career, I’m focusing on long-term relationships.
+                    </p>
+                        <p>
+                            Check out my comments to each section of the offer - I hope they will help you get to know me better!
+                        </p>
                     </div>
-                </blockquote>
                 <div>
                     <div className="w-full border-2 border-[var(--tw-prose-quote-borders)]" />
                 <div>
