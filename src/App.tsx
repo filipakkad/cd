@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <div className="font-montserrat flex flex-col justify-between gap-4 px-4 md:px-12 pt-12 md:pt-24">
+      <div className="font-montserrat flex flex-col justify-between gap-4 px-4 md:px-12 pt-12 md:pt-24 items-center">
           <div className="w-full flex gap-8 max-w-[80rem] flex-col lg:flex-row">
               <div className="flex w-fit justify-start flex-col items-start gap-4">
                   <div className=" sticky top-12 pt-2 flex flex-col gap-6">
