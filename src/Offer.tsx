@@ -30,8 +30,10 @@ export const Offer = () => {
     const [currentCommentSearch, setCurrentCommentSearch] = useSearchParams();
 
     useEffect(() => {
-        setCurrentCommentSearch({ comment: Comments.Intro });
-    }, []);
+        if(currentCommentSearch.get('comment') === null) {
+            setCurrentCommentSearch({ comment: Comments.Intro });
+        }
+    }, [currentCommentSearch, setCurrentCommentSearch]);
 
     const currentComment = currentCommentSearch.get('comment') as Comments ?? null;
 
