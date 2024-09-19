@@ -1,7 +1,6 @@
 **That's one of the most exciting parts of the offer!**
 
-And I can't wait to share my experience but also learn from other people! 🚀
-
+I thrive on shaping frontend architecture and establishing best practices that really move the needle. Leading and mentoring a team of talented engineers is something I'm passionate about, but I'm equally excited to learn from others along the way. 🚀 My goal is to build something scalable, robust, and efficient—while having fun doing it!
 
 
 

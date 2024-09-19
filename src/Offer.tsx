@@ -11,14 +11,15 @@ const LinkWithComment = ({children, isActive, onSelectedComment}: {
 }) => {
     return (
         <button onClick={onSelectedComment} className={clsx(
-            " decoration-2 decoration-gray-500",
-            { "translate-x-2": isActive },
+            " decoration-2 decoration-blue-400 font-semibold",
             'relative inline-block cursor-pointer underline bg-transparent text-left', // Use `inline-block` for multi-line and positioning support
             {"before:bg-transparent": !isActive}, // Hide the pseudo-element when not active
-            "hover:before:bg-gray-600",
             'before:transition-all  before:absolute before:top-0 before:left-0 before:w-full before:h-full before:scale-x-[1.03] before:bg-gray-700 before:rounded before:z-[-1]', // Pseudo-element with full background
         )}>
-            {children}
+            <span className="flex items-center w-full">
+                {children}
+                {` 💬`}
+            </span>
         </button>
     )
 }
@@ -30,12 +31,31 @@ export const Offer = () => {
         <div className="flex gap-8 w-full flex-col lg:flex-row">
             <div
                 className="w-full prose dark:prose-invert prose-sm prose-stone !max-w-none text-white prose-amber text-left">
-                <h1 className=""><span className="text-blue-500">Filip as</span> Lead Frontend Engineer @ ChurchDesk 🚀</h1>
+                <h1 className="">Lead Frontend Engineer @ ChurchDesk 🚀</h1>
                 <h2 className="text-blue-500">CV vs Offer description</h2>
                 <blockquote className="">
-                    Please find my annotations to the relevant points of the offer elaborating on my experience, skills required for the role and motivation.<br/>
+                    <div className="leading-tight font-light">
+                        <strong>Hi ChurchDesk team!</strong>
+                        <p>Thanks for checking out this page. I put it together while prepping for my interview and
+                            thought it’d be a fun way to share my thoughts with you.</p>
+                        <p>I’ve gone through each point and highlighted the key aspects from the job description.
+                            Hopefully, this gives you a clearer picture of who I am and sparks some interesting
+                            conversation.</p>
+                        <p>I whipped this up quickly in my spare time, so please excuse the rough edges. 😄</p>
+                        <strong>But first - why did I apply?</strong>
+                        <p>I send applications only to carefully selected offers, and this one aligns closely with what
+                            I’m looking for. I’m particularly interested in the mission of providing IT solutions for
+                            parishes—something I’ve thought about before. It’s a business domain I understand and
+                            identify with. Additionally, the opportunity for greater responsibility, both for the team
+                            and the product, is a natural and necessary direction for my development. The offer's
+                            conditions (including the Scandinavian work culture) are additional factors that appeal to
+                            me. At this stage in my career, I’m focusing on long-term relationships.</p>
+                        <p>Thanks again for your time!</p>
+                        <p>Filip</p>
+                    </div>
                 </blockquote>
                 <div>
+                    <div className="w-full border-2 border-[var(--tw-prose-quote-borders)]" />
                 <div>
                     <div>
                         <h4>

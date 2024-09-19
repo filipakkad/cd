@@ -99,7 +99,7 @@ export const Comment = ({currentComment, onClose}: { currentComment: Comments, o
                 </div>
             </div>
             <div className="border-t my-2 border-gray-50/50 px-4"/>
-            <p className="prose prose-sm prose-code:border-red-400 prose-code:before:hidden prose-code:after:hidden prose-code:bg-gray-600 prose-code:p-0.5 prose-code:rounded !max-w-none leading-tight prose-invert text-justify px-4 pb-4">
+            <p className="prose prose-sm prose-code:border-red-400 prose-code:before:hidden prose-code:after:hidden prose-code:bg-gray-600 prose-code:p-0.5 prose-code:rounded !max-w-none leading-tight prose-invert text-left px-4 pb-4">
                 <MarkdownRenderer markdown={markdownContent}/>
             </p>
         </animated.div>

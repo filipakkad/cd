@@ -1,6 +1,5 @@
-At `Appsilon` I was managing a team of developers (acting as product owner too) to our external client from pharmaceutical industry (complicated domain). 
+At `Appsilon`, I managed a team of developers (and took on a product owner role as well) for an external client in the pharmaceutical industry—a highly complex domain.
 
-During my shift our team grew from 2 to 7 members. We were developing concurrently multiple applications and facing different challenges and requirements from multiple stakeholders.
-Therefore, as a team leader I was not only responsible for quality of our applications but also for organizing workflow across different streams.
+During my time there, the team grew from 2 to 7 members, and we were tasked with developing multiple applications simultaneously, each with unique challenges and requirements from various stakeholders. As a team leader, I wasn’t just responsible for ensuring the quality of the applications, but also for organizing and streamlining workflows across different work streams to secure timely releases.
 
-I am curious how different are these projects? What are the challenges you are facing? Is more of a multi-tenant application or several separate applications? 
+I’m really curious to learn more about the nature of the projects you’re working on! What are the key challenges you're facing? Is it more of a multi-tenant application setup, or are you managing several separate applications? 
